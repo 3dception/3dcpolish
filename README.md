@@ -1,4 +1,4 @@
-# 3dcpolish
+# 3DCPolish
 
 
 3DC Polish - Add-on Documentation
