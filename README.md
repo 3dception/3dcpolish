@@ -1,192 +1,78 @@
-# 3DCPolish
+ 🟣 3DC Polish
 
+As a 3D artist, I have worked in Blender for years and highly admired it's potential as the ultimate one‑stop shop for creators—modeling, texturing, animation, physics simulation all under one roof. However, when it comes to sculpting, I relied on ZBrush for its high‑fidelity, particularly its indispensable ClayPolish tool that effortlessly refined details and sharpened edges. But migrating fully to Blender meant leaving that polish behind... until now.
 
-3DC Polish - Add-on Documentation
+Introducing 3DC Polish! 
 
+An add‑on born from my and the entire sculpting community's long‑standing call for a dedicated polishing solution. Since Blender's sculpting tools debuted, artists like us have dreamed of a native way to tighten surfaces, exaggerate creases, and add organic flair without jumping apps. I built this as a faithful Claypolish‑inspired substitute, optimized for Blender's ecosystem!
 
-  3DC Polish is a Blender add-on designed to enhance and polish 3D meshes with simple deformation and remeshing tools. It provides intuitive controls for mesh refinement, noise-based detailing, and dynamic remeshing similar to ZBrush's DynaMesh functionality.
-  
-  Compatibility
 
-    Blender Version: 4.3 and above
+✨ Key Features: Polish, Deform, and Remesh with Precision
 
-    Operating Systems: Windows, macOS, Linux
+Edge Polish Mastery
 
-    Object Types: Mesh objects only
+    Iteratively sharpen curvature and creases while preserving fine details.
 
-  Installation
+    Adjustable iterations, contrast, and thresholds for targeted edge enhancement—perfect for hard‑surface models or organic forms.
 
-    Download the 3dc_polish.zip file
+    Built‑in detail preservation for buttery‑smooth finishes.
 
-    In Blender, go to Edit → Preferences → Add-ons
 
-    Click "Install" and select the downloaded file
+Real‑Time Deformation Preview
 
-    Enable the add-on by checking the checkbox next to "Mesh: 3DC Polish"
+    Inflate or deflate along vertex normals for volumetric tweaks.
 
-  Interface Location
-    
-    The add-on panel is located in the 3D Viewport sidebar under the "3DC Polish" category (press N to open sidebar if hidden).
-    Features
-    Edge Polish Section
+    Layer on procedural noise (Perlin or Fractal) with customizable intensity, scale, and seed randomization—add subtle wear, bumps, or terrain‑like details instantly.
 
-  Refine mesh edges and enhance surface details
+    Non‑destructive: Preview live, apply when ready, and iterate endlessly.
 
-    Iterations: Number of times to repeat the polish operation (1-10)
 
-    Details: Amount of surface details to preserve (0.0-1.0)
+Dynamic Voxel Remeshing
 
-    Curvature Radius: Influence radius for polish operation (1-10)
+    Quickly transform messy sculpts or boolean chaos into, volume‑preserving topology!
 
-    Edge Contrast: Intensity of edge highlighting (0.0-10.0)
+    Resolution up to 2048 — ideal for retopology on the fly.
 
-    Polish Strength: Amount of polishing to apply (0.0-1.0)
+    This retopology is voxel based. Recommended to be used on simple meshes to avoid artifacts.
 
-    Curvature Threshold: Only affects sharper curvature areas at higher values (0.0-1.0)
+    Note that higher resolution meshes take much longer to polish.
 
-    Blur: Post-processing smoothing iterations to get rid of artifacts (0-10)
-    
-    Usage: Click the "Polish" button to apply edge refinement based on your settings.
-    Deformation Section
-    
 
-  Real-time mesh deformation with preview
 
-    Inflate: Inflate/deflate mesh along vertex normals (-2.0 to 2.0)
+⚙️ Technical Notes:
 
-    Smooth: Smoothing iterations after deformation (0-100)
+    Performance: Powered by CPU‑optimized BMesh operations (Blender Python's native limitation). Blender Python natively does support GPU acceleration. This leads to much slower performance compared to claypolish tool in zbrush. Performance scales based on the CPU capabilities and poly count.
+    Iterations: Iteration slider will multiply the operation time. 
 
-    Noise Type:
+    High polygon meshes: Polish becomes significantly slower on high polygons.
 
-        Perlin: Smooth, natural-looking noise
+    Remeshing: Remeshing implemented is a simple voxel remeshing, to prioritize performance. However the resolution mapping is based on surface area. Which means the density output of the mesh will be similar to zbrush's Dynamesh.
 
-        Fractal: Natural, terrain-like patterns
+    Requirements: Blender 4.3+. No external dependencies—install and sculpt
 
-    Noise Strength: Intensity of noise displacement (0.0-1.0)
 
-    Noise Scale: Frequency of noise pattern (0.0-1000.0)
 
-    Noise Seed: Seed value for reproducible noise generation
+💡 Thank you for considering!
 
-Features:
 
-  Real-time preview of deformations
+I crafted this tool during my own shift from ZBrush to Blender, filling the void with algorithms that mimic ClayPolish's magic but leverage BMesh for speed and safety
 
-    Randomize seed button for instant variation
+Its not ClayPolish, but its close!
 
-    "Apply" button to commit changes and update base mesh
+I am dedicated to providing updates and improvements to the best of my ability! 
 
-  Dynamic Remesh Section
+Updates will be released as needed to improve stability and usability.
 
-    Voxel-based remeshing with DynaMesh-like resolution control
+Feel free to to get in touch in case of any feedback, bugs or suggestions!
 
-    Resolution: Voxels across longest axis (64-2048)
+Buying this add on also contributes to the Blender Development Fund! 
 
-    Warning: High resolutions (>256) may take exponentially longer to process
 
-    Features:
 
-    Automatic voxel size calculation based on object bounds
+🔑 License
 
-    Automatic smoothing at high resolutions (512-2048)
+Released under GPL v3
 
-    Volume-preserving remeshing
 
-    Automatic shading smooth application
 
-Workflow Examples
-
-  Basic Mesh Polish
-
-    Select a mesh object
-
-    Set Edge Polish parameters:
-
-        Iterations: 1-3
-
-        Details: 0.85
-
-        Polish Strength: 0.7
-
-    Click "Polish"
-
-  Surface Detailing
-
-    Apply base mesh polish
-
-    Use Deformation section:
-
-        Set Noise Strength: 0.001-0.01
-
-        Adjust Noise Scale for detail size
-
-        Randomize seed until desired pattern
-
-    Click "Apply"
-
-  High-Resolution Remeshing
-
-    For sculpting preparation:
-
-        Set Resolution: 512-1024
-
-        Click "Remesh"
-
-    The remesh tool preserves volume at all resolutions.
-
-Performance Notes
-
-    Edge Polish: Performance scales with CPU capability, mesh complexity and iteration count. Polishing speed on high polygon meshes is significantly slower.
-
-    Comparison with Claypolish: Blender Python does not natively support GPU acceleration. Hence the performance takes a hit compared to zbrush's clay polish. 
-
-    Remeshing: High resolutions (>512) significantly increase processing time
-
-    Real-time Preview: Deformation preview updates instantly but may slow with dense meshes
-
-    Limits: The add on does not have inbuilt safety limits. Extreme values can provide irregular results. Values close to defaults often produce the best results with simple increase in iterations!
-
-    Artifacts: Use Blur slider to get rid of artifacts, if any, after polishing
-
-Technical Details
-
-  Algorithms Used
-
-    Curvature Detection: Local neighborhood curvature sampling for edge detection
-
-    Noise Generation: Built-in Blender noise functions (Perlin, Fractal)
-
-    Remeshing: Blender's voxel remesher with surface resolution mapping.
-
-    Smoothing: Bmesh smoothing operations with boundary preservation
-
-  Data Management
-
-    Creates temporary base mesh copies for deformation previews
-
-    Automatically cleans up temporary data on unregister
-
-    Non-destructive preview system for Deformation tools
-
-Troubleshooting
-  Common Issues
-
-    Add-on not appearing: Ensure Blender version is 4.3+ and add-on is properly enabled
-
-    No real-time preview: Check that a mesh object is selected and in Object Mode
-
-    Remeshing fails: Ensure mesh is manifold and doesn't contain extreme non-manifold geometry
-
-  Best Practices
-
-    Start with lower resolution meshes and gradually increase
-    Polishing can be used as a clean up tool along with a finishing tool.
-    Make use of the tools full capability by exploring edge contrast without polish for highlighting the edge curvature.
-    Use moderate polish iterations (1-3) for balanced results
-    Use Blur slider to get rid of any artifacts after polishing.
-    Save work before applying high-resolution remeshing operations
-
-Support:
-This add-on uses standard Blender APIs and should be stable across all supported platforms. For issues, ensure you're using the latest Blender version and that your system meets Blender's minimum requirements.
-
-
+🎨 Sculpt smart.  Polish with a click!  
