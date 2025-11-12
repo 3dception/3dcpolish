@@ -73,10 +73,15 @@ Buying this add on also contributes to the Blender Development Fund!
 
 Released under GPL v3
 
+
+
+
 ## 🔗 Buy My Blender Add-on
 
 - 🛒 [Available on Gumroad](https://gumroad.com/yourstore)
 - 🧪 [Also on Superhive](https://blendermarket.com/yourproduct)
+
+
 
 
 🎨 Sculpt smart.  Polish with a click!  
