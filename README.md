@@ -82,6 +82,7 @@ Released under GPL v3
 - 🧪 [Also on Superhive](https://blendermarket.com/yourproduct)
 
 
+ ⚠️ The add-on itself is **not hosted on GitHub**. This repository is for documentation, updates, and support only.
 
 
 🎨 Sculpt smart.  Polish with a click!  
