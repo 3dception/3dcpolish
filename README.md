@@ -76,7 +76,7 @@ Released under GPL v3
 ## 🔗 Buy My Blender Add-on
 
 - 🛒 [Available on Gumroad](https://gumroad.com/yourstore)
-- 🧪 [Also on Blender Market](https://blendermarket.com/yourproduct)
+- 🧪 [Also on Superhive](https://blendermarket.com/yourproduct)
 
 
 🎨 Sculpt smart.  Polish with a click!  
