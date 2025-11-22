@@ -78,8 +78,8 @@ Released under GPL v3
 
 ## 🔗 Buy My Blender Add-on
 
-- 🛒 [Available on Gumroad](https://gumroad.com/yourstore)
-- 🧪 [Also on Superhive](https://blendermarket.com/yourproduct)
+- 🛒 [Available on Gumroad](https://3dceptionstudio.gumroad.com/l/3dcpolish)
+- 🧪 [Also on Superhive](https://superhivemarket.com/products/3dc-polish)
 
 
  ⚠️ The add-on itself is **not hosted on GitHub**. This repository is for documentation, updates, and support only.
