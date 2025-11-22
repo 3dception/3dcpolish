@@ -194,8 +194,6 @@ Object Types: Mesh objects only
 
 
 
-
-
 #### Workflow Examples
 
 
@@ -300,7 +298,7 @@ Object Types: Mesh objects only
 
 
 
-* Remeshing: High resolutions (>512) significantly increase processing time
+* Remeshing: High resolutions (>512) significantly increase processing time. Voxel remeshing does not result in a good topology. It is the most useful for prototype/testing purposes
 
 
 
@@ -423,4 +421,5 @@ Object Types: Mesh objects only
 
 
 ###### Support: This add-on uses standard Blender APIs and should be stable across all supported platforms. For issues, ensure you're using the latest Blender version and that your system meets Blender's minimum requirements.
+
 
