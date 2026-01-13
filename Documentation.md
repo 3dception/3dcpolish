@@ -63,7 +63,7 @@ Object Types: Mesh objects only
 
 
 
-* Global Storage\*\*: Presets are saved to Blender's config directory and persist between sessions
+* Global Storage: Presets are saved to Blender's config directory and persist between sessions
 
 
 
@@ -465,6 +465,7 @@ Object Types: Mesh objects only
 
 
 ###### Support: This add-on uses standard Blender APIs and should be stable across all supported platforms. For issues, ensure you're using the latest Blender version and that your system meets Blender's minimum requirements.
+
 
 
 
