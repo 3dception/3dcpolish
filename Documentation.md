@@ -55,6 +55,30 @@ Object Types: Mesh objects only
 ### Features:
 
 
+#### Preset Management
+
+
+
+* Save/Load Polish Settings: Store up to 10 different edge polish configurations for quick access
+
+
+
+* Global Storage\*\*: Presets are saved to Blender's config directory and persist between sessions
+
+
+
+* Preset Operations:
+
+	- Save: Store current edge polish settings with a custom name
+
+	- Load: Apply saved settings from the dropdown menu
+
+ 	- Delete: Remove unwanted presets
+
+
+
+* Location: Presets file is stored at: `\[Blender Config]/edge\_polish\_presets.json`
+
 
 #### Edge Polish Section
 
@@ -105,7 +129,6 @@ Object Types: Mesh objects only
 
 
 
-
 * Real-time mesh deformation with preview
 
 
@@ -121,12 +144,33 @@ Object Types: Mesh objects only
 * Noise Type:
 
 
-
 &nbsp;   Perlin: Smooth, natural-looking noise
 
 
+&nbsp;    Fractal: Natural, terrain-like patterns
 
-&nbsp;   Fractal: Natural, terrain-like patterns
+
+&nbsp;    Voronoi: Cellular, pattern-like noise
+
+
+&nbsp;   Custom: Use image textures as displacement patterns
+
+
+
+* Custom Texture Features:
+
+
+&nbsp; - Browse: Load JPG, PNG, TIFF, BMP, EXR, or HDR images as textures
+
+&nbsp; - Refresh: Update texture list to show all available textures
+
+&nbsp; - Coordinate Systems:
+
+&nbsp;	Local: Use object's local coordinates
+
+&nbsp;	Global: Use world coordinates
+
+&nbsp;	Object: Use another object's coordinate space
 
 
 
@@ -421,5 +465,6 @@ Object Types: Mesh objects only
 
 
 ###### Support: This add-on uses standard Blender APIs and should be stable across all supported platforms. For issues, ensure you're using the latest Blender version and that your system meets Blender's minimum requirements.
+
 
 
